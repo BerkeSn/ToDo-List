@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>ToDo List</h1>
+        <!-- Input field and button for adding a new task -->
+        <div class="input-container">
+            <input type="text" placeholder="Görev Girin..." id="todoInput">
+            <button onclick="addTodo()"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <!-- List where tasks will be dynamically added -->
+        <ul id="todoList">
+            <!-- Todo items will be added here dynamically with JavaScript. -->
+        </ul>
+    </div>
+    
+    <div class="sub-container">
+        <span class="header">
+            <h2 id="sub-title">Yeni ToDo</h2>
+            <!-- Button to go back from sub-container -->
+            <button id="back">Back</button>
+        </span>
+
+        <!-- Input field and button for adding a new sub-task -->
+        <div class="sub-input">
+            <input type="text" placeholder="Görev Girin..." id="subInput">
+            <button id="subtodosubmit"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <!-- List where sub-tasks will be dynamically added -->
+        <ul id="subtodoList">
+            <!-- Sub-todo items will be added here dynamically with JavaScript. -->
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
