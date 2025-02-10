@@ -1,0 +1,197 @@
+/* Define root variables for primary and secondary colors */
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+}
+
+/* General body styling */
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(33deg, var(--primary-color),var(--secondary-color)); 
+    box-sizing: border-box;
+}
+
+/* Main container for the to-do list */
+.container{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Heading styling */
+h1{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Input container styling */
+.input-container{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type="text"]{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* Input focus effect */
+input[type="text"]:focus{
+    transform: scale(1.1);
+    margin-right: 20px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+button{
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    transition: 200ms all;
+}
+
+/* Button hover effect */
+button:hover{
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+/* List styling */
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List item styling */
+li{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Remove border from last list item */
+li:last-child{
+    border-bottom: none;
+}
+
+/* Hover effect for list items */
+li:hover{
+    transform: scale(1.1);
+    background-color: rgb(233, 225, 225);
+    border: none;
+    border-radius: 10px;
+    padding: 0px;   
+    padding-left: 10px;
+    margin: 0 10px 0 10px;
+}
+
+/* Span styling for text overflow */
+span{
+    flex: 1;
+    white-space: nowrap; 
+    overflow: hidden;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+}
+
+/* Completed tasks styling */
+.completed{
+    text-decoration: line-through;
+    color: #999;
+}
+.completed button{
+    color: #999;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+/* Header section styling */
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+/* Back button styling */
+#back{
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+/* Sub-container for additional to-do list */
+.sub-container{
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    left: 900px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all;
+}
+
+/* Sub-container title styling */
+#sub-title{
+    text-align: center;
+    color: #3498db;
+}
+
+/* Sub-container input section styling */
+.sub-input{
+    display: flex;
+    margin: 15px;
+    margin-bottom: 20px;
+}
+
+/* Sub-container to-do list styling */
+#subtodoList{
+    list-style-type: none;
+    padding: 15px;
+}
+
+/* Sub-container list items styling */
+#subtodoList li{
+    margin-left: 10px;
+}
